@@ -1,0 +1,302 @@
+/*	BASIC LAYOUT 	*/
+
+body{
+	margin: 0;
+}
+p{
+	font-family: Raleway;
+}
+
+/*	HEADER	*/
+
+.header{
+	width: 100%;
+    background-color: #0D4881;
+    height: 150px;
+    align-items: center;
+    display: flex;
+    /*margin-bottom: 5%;*/
+}
+
+h1{
+	font-family: Raleway;
+	color: white;
+	vertical-align: middle;
+	font-size: 60;
+	margin-left: 1%;
+}
+
+.logo{
+	height: 125px;
+	margin-left: 1%;
+}
+
+/* BANNER */
+
+#banner{
+	background-image: url("../img/miele_test.jpg");
+    height: 500px;
+    background-size: 100%;
+    background-position: center;
+    margin-bottom: 5%;
+    transition: background-size .5s ease-in-out;
+    -moz-transition: background-size .5s ease-in-out;
+    -web-kit-transition: background-size .5s ease-in-out;
+		width: 1920px;
+}
+
+#banner:hover{
+	background-size: 105%;
+	transition: background-size .5s ease-in-out;
+  -moz-transition: background-size .5s ease-in-out;
+  -web-kit-transition: background-size .5s ease-in-out;
+}
+
+
+#banner:hover .caption{
+		opacity: 1;
+	}
+	.caption{
+		cursor: pointer;
+		position: absolute;
+		opacity: 0;
+		-webkit-transition:all 0.45s ease-in-out;
+		-moz-transition:all 0.45s ease-in-out;
+		-o-transition:all 0.45s ease-in-out;
+		-ms-transition:all 0.45s ease-in-out;
+		transition:all 0.45s ease-in-out;
+		widows: 100%;
+	}
+	.blur{
+		background-color: rgba(0,0,0,0.65);
+		height: 500px;
+		width: 100%;
+		z-index: 5;
+		position: absolute;
+	}
+	.caption-text h1{
+		text-transform: uppercase;
+		font-size: 24px;
+	}
+	.caption-text{
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		height: 325px;
+		width: 1920px;
+		text-align: center;
+		top:175px;
+	}
+
+
+/*	NAVIGATION	*/
+
+#nav{
+	color: white;
+	z-index: 10;
+	position: absolute;
+	right: 0;
+	top: 95;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    vertical-align:bottom;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 14px 16px;
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: 25;
+    transition: 0.5s all;
+}
+
+li a:hover:not(.active) {
+	text-shadow: 1px 1px black;
+	transition: 0.5s all;
+}
+
+.active {
+	font-weight: 800;
+	border-bottom: 2px solid white;
+}
+
+ul.topnav li.icon {
+	display: none;
+}
+
+
+/*	ARTICLES	*/
+
+article.home{
+	width: 45%;
+    margin-left: 15%;
+    padding-bottom: 5%;
+    float: left;
+}
+
+article-h1{
+    color: black;
+    font-family: Raleway;
+    font-size: 35;
+}
+
+.main-img{
+	max-width: 300px;
+	float: right;
+	vertical-align: middle;
+	margin-top: 10%;
+	margin-right: 5%;
+}
+
+/* Table */
+
+td{
+	text-align: center;
+	font-family: Raleway;
+}
+
+.oeffnungszeiten{
+	margin-top: 2%;
+}
+.oeffnungszeiten-mobile{
+display:none;
+}
+/*	FOOTER	*/
+
+footer{
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #FF8645;
+	position: fixed;
+}
+
+footer a{
+	margin-top: 25px;
+	font-family: Raleway;
+	color: white;
+	font-size: 20;
+	text-decoration: none;
+}
+
+line{
+	font-family: Raleway;
+	color: white;
+	font-size: 20;
+	margin-left: 3px;
+}
+
+#footer_text{
+	    margin-top: 13.3px;
+	    display: inline-block;
+}
+
+#created{
+	display: inline-block;
+	float: right;
+	margin-top: 13.3px;
+	font-family: Raleway;
+	color: #FFB47C;
+	font-size: 20;
+}
+
+/* MEDIA QUERRIES */
+
+@media screen and (max-width:1200px) {
+
+/* Banner */
+	#banner{
+  	    height: 150px;
+  }
+	.blur{
+	height: 150px;
+	width: auto;
+	}
+	.caption-text{
+	height: 150px;
+	top: 0;
+	}
+	/* Navigation */
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  .header.responsive-head{
+  	border-bottom: solid #0D4881 200px;
+  	transition: border-width 0.15s ease-in-out;
+  }
+
+/* Tabelle Öffnungszeiten */
+.oeffnungszeiten{
+display:none;
+}
+.oeffnungszeiten-mobile{
+	font-family: Raleway;
+	display: block;
+}
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+}
+@media screen and (max-width:550px) {
+	.logo {
+    	height: 100px;
+    	right: 15;
+    	position: absolute;
+    	top: 5;
+    	margin: auto;
+	}
+}
